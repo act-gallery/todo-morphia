@@ -102,9 +102,7 @@ public class Todo {
     }
 
     public static void main(String[] args) throws Exception {
-        System.setProperty("http.port", "8888");
-        System.setProperty("cli.port", "8889");
-        Act.start("TODO-Morphia");
+        Act.start();
     }
 
 }

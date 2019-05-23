@@ -21,6 +21,7 @@ package demo.todo.morphia;
  */
 
 import act.data.Sensitive;
+import act.db.LastModifiedAt;
 import act.db.morphia.MorphiaAdaptiveRecord;
 import act.db.morphia.MorphiaDao;
 import org.mongodb.morphia.annotations.Entity;
@@ -30,6 +31,9 @@ public class TodoItem extends MorphiaAdaptiveRecord<TodoItem> {
 
     @Sensitive
     public String desc;
+
+    @LastModifiedAt
+    public Long ts;
 
     public TodoItem(String desc) {
         this.desc = desc;
